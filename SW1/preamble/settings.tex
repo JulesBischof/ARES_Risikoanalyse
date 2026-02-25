@@ -1,0 +1,31 @@
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}  % Left-aligned column with fixed width
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}    % Centered column with fixed width
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}   % Right-aligned column with fixed width
+
+
+% =========================
+% Fonts and Indents
+% =========================
+\setlength{\parindent}{0pt} % no indents
+% \setlength{\parindent}{15pt} % default indent
+% \noindent % Temporär keinen Einzug
+
+% =========================
+% GEOMETRY and Format
+% =========================
+\usepackage[left=3cm, bottom=3cm, right=3cm, top=3cm]{geometry}
+
+% =========================
+% Minted Settings
+% =========================
+\usemintedstyle{friendly}
+
+\setminted{
+	fontsize=\footnotesize,
+	linenos,
+	numbersep=-1pt,
+	breaklines,
+	frame=single,
+	framesep=0.5mm,
+	bgcolor=gray!5
+}
