@@ -1,0 +1,32 @@
+%======================================%
+% Subfile                              %
+%======================================%
+
+% Template
+
+\section{Learnings}
+
+\begin{itemize}
+	\item Keine Software laufen lassen, die es nicht zwingend benötigt. Im Beispiel der Ariane ist wäre das die Regelung, die nur vor dem Start der Rakete benötigt wurde.
+
+	\item Tests in realen Umgebungsbedingungen ausführen. Realistische Eingabedaten in kompletten Simulationen vor dem Start einer Mission.
+
+	\item Kein Totalausfall der Software als Fehlerbehandlung nutzen. Auf \textit{best effort} zurückgreifen: Schätzwerte liefern.
+
+	\item Software Reviews und klare Zuständigkeiten für Teile der Software. Gegebenenfalls Tests durch externe Experten.
+
+	\item Im Fehlerfall mehr Telemetriedaten übermitteln - mehr Diagnoseoptionen. Im Fall der Ariane 5 wurden keine solche Logs gesendet.
+
+	\item Identifizierung kritischer Komponenten und Abhängigkeiten von solchen.
+
+	\item Trajektoriedaten in die Spezifikation und auch die Testvorraussetzungen aufnehmen.
+
+	\item Überprüfung und sicherstellen der \textit{Test coverage}. Decken Tests alle Fälle ab?
+
+	\item Sicherstellen, dass sich Code und seine Dokumentation decken. Es gab Annahmen über Wertebereiche die nicht dokumentiert und nicht überprüft wurden. Jede Zeile Code muss begründbar sein.
+
+	\item Es soll ein Team geben, dass die Softwarequalifikation definiert und überwacht. Sie legen Regeln zu Tests und Verfikationen aus und führen Standarts ein.
+
+	\item Klare Zuständigkeiten und transparente Entscheidungswege. Einfache und klare Schnittstellen auch zu externen Partnern.
+
+\end{itemize}
