@@ -1,0 +1,47 @@
+%======================================%
+% Subfile                              %
+%======================================%
+
+% Template
+
+\section{Übersicht}
+
+Fallschirm für Drohnen. Bei Ausfall des Flugsystems wird die Drohnen sicher mittels Fallschirmes gelandet. Die Drohnen transportiert fragile Ware und darf deshalb zu keinem Zeitpunkt einfach abstürzen.
+
+\section{Implementation}
+
+\subsection{Hardware}
+
+\begin{itemize}
+	\item Beschleunigungssensoren (xyz), mehrere Redundant, ungerade Anzahl z.B. 3x
+	\item Mikrokontroller (3 verschiedene (z.B. 1xRisc-V, 1xCortex-M4, FPGA) )
+	\item Energieversorgung, doppelt ausgeführt.
+\end{itemize}
+
+\subsection{Software}
+\begin{itemize}
+	\item FPGA implementiert mit VHDL
+	\item 1× MCU programmiert in C, kompiliert mit GCC
+	\item 1× MCU programmiert in C++, kompiliert mit TI-CX2000
+	\item Mehrheitsentscheid über Sensorwerte: Wenn 2 von 3 freien Fall melden, wird der Fallschirm ausgelöst
+	\item Prozessoren laufen jeweils um einen Taktzyklus versetzt
+	\item Wenn ein Fallschirm ausgelöst wurde und keine Bremsbeschleunigung detektiert wird: Zündung eines zweiten Fallschirms
+\end{itemize}
+
+\subsection{Aktor}
+\begin{itemize}
+	\item Sprengkapsel, die den Fallschirm enthält und auslöst (2 Stück)
+	\item \url{https://shop.thebioniceye.co.uk/products/gbs50}
+	\item Galaxy Sky Ballistic Parachutes
+	\item Bedingung: Bekannter Lieferant mit viel Erfahrung in diesem Gebiet (geringes Risiko, dass unerfahrener Hersteller \textit{Anfängerfehler} macht.)
+\end{itemize}
+
+
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=0.3\textwidth]{mainmatter/figures/bild_fallschirm.png}
+	\end{center}
+	\caption{Quelle: {\tiny \url{https://www.uavgl.com/quality-12710049-smart-drone-parachute-system-for-commercial-drone-safety-10-100kg-load-capacity}}}
+\end{figure}
+
