@@ -45,3 +45,21 @@ Fallschirm für Drohnen. Bei Ausfall des Flugsystems wird die Drohnen sicher mit
 	\caption{Quelle: {\tiny \url{https://www.uavgl.com/quality-12710049-smart-drone-parachute-system-for-commercial-drone-safety-10-100kg-load-capacity}}}
 \end{figure}
 
+\subsection{Fehlerquellen}
+\begin{itemize}
+	\item Starke EMI könnte zu messfehlern mehrerer accelerometer führen
+	\item Überhitzung der Aktoren führt zu ungewollter Auslösung der Fallschirme
+	\item Distanz zum Boden ist bei Auslösung kleiner als 5m (vorgabe des Fallschirmes)
+	\item Fehlfunktion der Drohne fürt zu Position, in welcher der Fallschirm nicht ausgelöst werden kann (Drohne Verliert Propeller und Dreht sich um 180° in X oder Y Achse)
+    \item Rotoren Drehen sich nach dem Abschalten noch schnell genug, um den Ersten Fallschirm zu beschädigen, oder zu zerstören.
+    \item unzureichende Redundanz, es fallen mehr Teile (Sensoren, Prozessoren, etc) aus, als eingeplant wurden.
+    \Item Accelerometer werden duch zu Starke beschleunigungen beschädigt (unwahrscheinlich oft für mehrere tausend G ausgelegt)
+\end{itemize}
+
+\subsection{Schema}
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=\textwidth]{mainmatter/figures/schema.png}
+	\end{center}
+	\caption{ Schematische Darstellung des Fallschirm-Systems}
+\end{figure}
